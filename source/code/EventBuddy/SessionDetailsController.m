@@ -117,9 +117,10 @@
                               cachePolicy:NSURLRequestUseProtocolCachePolicy
                               timeoutInterval:60.0];
     [NSURLConnection sendAsynchronousRequest:theRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
-        NSString *imageUrl = @"https://twimg0-a.akamaihd.net/profile_images/1349731834/profile2_reasonably_small.png";
-        NSString *raterName = @"Nick Harris";
-        if (error) {
+        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse*) response;
+        NSString *imageUrl = @"https://si0.twimg.com/profile_images/2968289632/5d4b0aca7e7b182007be94ea7fbd3d9d_bigger.png";
+        NSString *raterName = @"Paul Batum";
+        if (error || httpResponse.statusCode >= 400) {
             //do something with error
             NSLog(@"There was an error! %@", error);
         } else {

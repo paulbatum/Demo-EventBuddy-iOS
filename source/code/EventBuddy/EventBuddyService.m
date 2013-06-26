@@ -31,9 +31,10 @@ static EventBuddyService *singletonInstance;
 
 -(EventBuddyService *) init
 {
-    // Initialize the Mobile Service client with your URL and key
-    MSClient *newClient = [MSClient clientWithApplicationURLString:@"https://{mobile-service-name}.azure-mobile.net/"
-        withApplicationKey:@"{mobile-service-key}"];
+    //NSString *url = @"https://eventbuddykg-azure--mobile-net-c6rvzxa9i2hp.runscope.net/";
+    NSString *url = @"https://eventbuddykg.azure-mobile.net/";
+    MSClient *newClient = [MSClient clientWithApplicationURLString: url
+                                                 withApplicationKey:@"ZAcIzJkGSoPgYbBEgvroUxaRNoWmGa53"];
     
     // Add a Mobile Service filter to enable the busy indicator
     self.client = [newClient clientwithFilter:self];

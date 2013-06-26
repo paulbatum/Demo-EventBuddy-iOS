@@ -34,6 +34,7 @@
 		105E238D1649AC6200601A9D /* NewSessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 105E238C1649AC6200601A9D /* NewSessionViewController.m */; };
 		10E79DB0165D4913004815E6 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E79DAF165D4913004815E6 /* arrow.png */; };
 		10E79DB6165D4952004815E6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E79DB5165D4952004815E6 /* QuartzCore.framework */; };
+		FFA3EEE2177651B600B0D439 /* PullRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA3EEE1177651B600B0D439 /* PullRefreshTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,8 @@
 		105E238C1649AC6200601A9D /* NewSessionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewSessionViewController.m; sourceTree = "<group>"; };
 		10E79DAF165D4913004815E6 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrow.png; path = Assets/arrow.png; sourceTree = "<group>"; };
 		10E79DB5165D4952004815E6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FFA3EEE0177651B600B0D439 /* PullRefreshTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullRefreshTableViewController.h; sourceTree = "<group>"; };
+		FFA3EEE1177651B600B0D439 /* PullRefreshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullRefreshTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 		105E22891644637200601A9D /* EventBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				FFA3EEE0177651B600B0D439 /* PullRefreshTableViewController.h */,
+				FFA3EEE1177651B600B0D439 /* PullRefreshTableViewController.m */,
 				105E230316485A5B00601A9D /* Icon.png */,
 				105E230416485A5C00601A9D /* Icon@2x.png */,
 				105E22BF1647324200601A9D /* Assets */,
@@ -258,6 +263,7 @@
 				105E22BE16472CD300601A9D /* SessionDetailsController.m in Sources */,
 				105E238A1649AC5A00601A9D /* NewEventViewController.m in Sources */,
 				105E238D1649AC6200601A9D /* NewSessionViewController.m in Sources */,
+				FFA3EEE2177651B600B0D439 /* PullRefreshTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

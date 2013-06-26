@@ -107,6 +107,7 @@
     , @"start" : startDate
     , @"end" : endDate
     , @"speaker" : self.txtTwitter.text
+    , @"img" : @"https://si0.twimg.com/profile_images/2968289632/5d4b0aca7e7b182007be94ea7fbd3d9d_bigger.png"
     , @"room" : self.txtRoom.text};
     
     //Activity indicators
