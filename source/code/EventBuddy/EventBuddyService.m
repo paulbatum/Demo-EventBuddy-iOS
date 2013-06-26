@@ -31,19 +31,17 @@ static EventBuddyService *singletonInstance;
 
 -(EventBuddyService *) init
 {
-    //NSString *url = @"https://eventbuddykg-azure--mobile-net-c6rvzxa9i2hp.runscope.net/";
-    NSString *url = @"https://eventbuddykg.azure-mobile.net/";
-    MSClient *newClient = [MSClient clientWithApplicationURLString: url
-                                                 withApplicationKey:@"ZAcIzJkGSoPgYbBEgvroUxaRNoWmGa53"];
+    MSClient *client = [MSClient clientWithApplicationURLString:@"https://eventbuddykg.azure-mobile.net/"
+                                                 applicationKey:@"ZAcIzJkGSoPgYbBEgvroUxaRNoWmGa53"];
     
     // Add a Mobile Service filter to enable the busy indicator
-    self.client = [newClient clientwithFilter:self];
+    self.client = [client  clientWithFilter:self];
     
     // Create an MSTable instance to allow us to work with the TodoItem table
     //self.table = [_client getTable:@"TodoItem"];
-    self.eventsTable = [_client getTable:@"Event"];
-    self.sessionsTable = [_client getTable:@"Session"];
-    self.ratingsTable = [_client getTable:@"Rating"];
+    self.eventsTable = [_client tableWithName:@"Event"];
+    self.sessionsTable = [_client tableWithName:@"Session"];
+    self.ratingsTable = [_client tableWithName:@"Rating"];
     
     self.events = [[NSMutableArray alloc] init];
     self.ratings = [[NSMutableArray alloc] init];
@@ -80,7 +78,7 @@ static EventBuddyService *singletonInstance;
     NSPredicate * predicate = [NSPredicate predicateWithFormat:@"eventId == %i", eventId];
     
     // Query the TodoItem table and update the items property with the results from the service
-    [self.sessionsTable readWhere:predicate completion:^(NSArray *results, NSInteger totalCount, NSError *error) {
+    [self.sessionsTable readWithPredicate:predicate completion:^(NSArray *results, NSInteger totalCount, NSError *error) {
         
         [self logErrorIfNotNil:error];
         
@@ -178,8 +176,8 @@ static EventBuddyService *singletonInstance;
 
 
 - (void) handleRequest:(NSURLRequest *)request
-                onNext:(MSFilterNextBlock)onNext
-            onResponse:(MSFilterResponseBlock)onResponse
+                next:(MSFilterNextBlock)onNext
+            response:(MSFilterResponseBlock)onResponse
 {
     // A wrapped response block that decrements the busy counter
     MSFilterResponseBlock wrappedResponse = ^(NSHTTPURLResponse *response, NSData *data, NSError *error) {

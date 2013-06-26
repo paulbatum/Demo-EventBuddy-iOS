@@ -17,7 +17,6 @@
 		105E22981644637200601A9D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 105E22971644637200601A9D /* Default@2x.png */; };
 		105E229A1644637200601A9D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 105E22991644637200601A9D /* Default-568h@2x.png */; };
 		105E229D1644637200601A9D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 105E229B1644637200601A9D /* MainStoryboard.storyboard */; };
-		105E22A71644639300601A9D /* WindowsAzureMobileServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 105E22A61644639300601A9D /* WindowsAzureMobileServices.framework */; };
 		105E22AE164718ED00601A9D /* EventBuddyService.m in Sources */ = {isa = PBXBuildFile; fileRef = 105E22AD164718ED00601A9D /* EventBuddyService.m */; };
 		105E22B416471BB000601A9D /* EventListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 105E22B316471BB000601A9D /* EventListController.m */; };
 		105E22B71647258700601A9D /* SessionListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 105E22B61647258700601A9D /* SessionListController.m */; };
@@ -35,6 +34,7 @@
 		10E79DB0165D4913004815E6 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 10E79DAF165D4913004815E6 /* arrow.png */; };
 		10E79DB6165D4952004815E6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E79DB5165D4952004815E6 /* QuartzCore.framework */; };
 		FFA3EEE2177651B600B0D439 /* PullRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA3EEE1177651B600B0D439 /* PullRefreshTableViewController.m */; };
+		FFA3EEEC177B67BC00B0D439 /* WindowsAzureMobileServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFA3EEEB177B67BC00B0D439 /* WindowsAzureMobileServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,7 +52,6 @@
 		105E22971644637200601A9D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		105E22991644637200601A9D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		105E229C1644637200601A9D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		105E22A61644639300601A9D /* WindowsAzureMobileServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WindowsAzureMobileServices.framework; sourceTree = "<group>"; };
 		105E22AC164718ED00601A9D /* EventBuddyService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventBuddyService.h; sourceTree = "<group>"; };
 		105E22AD164718ED00601A9D /* EventBuddyService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventBuddyService.m; sourceTree = "<group>"; };
 		105E22B216471BB000601A9D /* EventListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventListController.h; sourceTree = "<group>"; };
@@ -77,6 +76,7 @@
 		10E79DB5165D4952004815E6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FFA3EEE0177651B600B0D439 /* PullRefreshTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullRefreshTableViewController.h; sourceTree = "<group>"; };
 		FFA3EEE1177651B600B0D439 /* PullRefreshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullRefreshTableViewController.m; sourceTree = "<group>"; };
+		FFA3EEEB177B67BC00B0D439 /* WindowsAzureMobileServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WindowsAzureMobileServices.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +88,7 @@
 				105E22841644637200601A9D /* UIKit.framework in Frameworks */,
 				105E22861644637200601A9D /* Foundation.framework in Frameworks */,
 				105E22881644637200601A9D /* CoreGraphics.framework in Frameworks */,
-				105E22A71644639300601A9D /* WindowsAzureMobileServices.framework in Frameworks */,
+				FFA3EEEC177B67BC00B0D439 /* WindowsAzureMobileServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,7 +116,7 @@
 		105E22821644637200601A9D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				105E22A61644639300601A9D /* WindowsAzureMobileServices.framework */,
+				FFA3EEEB177B67BC00B0D439 /* WindowsAzureMobileServices.framework */,
 				105E22831644637200601A9D /* UIKit.framework */,
 				105E22851644637200601A9D /* Foundation.framework */,
 				105E22871644637200601A9D /* CoreGraphics.framework */,
