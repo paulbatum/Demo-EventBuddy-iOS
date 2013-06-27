@@ -35,6 +35,10 @@
 		10E79DB6165D4952004815E6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E79DB5165D4952004815E6 /* QuartzCore.framework */; };
 		FFA3EEE2177651B600B0D439 /* PullRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA3EEE1177651B600B0D439 /* PullRefreshTableViewController.m */; };
 		FFA3EEEC177B67BC00B0D439 /* WindowsAzureMobileServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFA3EEEB177B67BC00B0D439 /* WindowsAzureMobileServices.framework */; };
+		FFA3EEEE177BB55B00B0D439 /* NewRelicAgent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFA3EEED177BB55B00B0D439 /* NewRelicAgent.framework */; };
+		FFA3EEF0177BB6D400B0D439 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFA3EEEF177BB6D400B0D439 /* CoreTelephony.framework */; };
+		FFA3EEF2177BB6E600B0D439 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FFA3EEF1177BB6E600B0D439 /* libz.dylib */; };
+		FFA3EEF4177BB6EF00B0D439 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFA3EEF3177BB6EF00B0D439 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +81,10 @@
 		FFA3EEE0177651B600B0D439 /* PullRefreshTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullRefreshTableViewController.h; sourceTree = "<group>"; };
 		FFA3EEE1177651B600B0D439 /* PullRefreshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullRefreshTableViewController.m; sourceTree = "<group>"; };
 		FFA3EEEB177B67BC00B0D439 /* WindowsAzureMobileServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WindowsAzureMobileServices.framework; sourceTree = "<group>"; };
+		FFA3EEED177BB55B00B0D439 /* NewRelicAgent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NewRelicAgent.framework; sourceTree = "<group>"; };
+		FFA3EEEF177BB6D400B0D439 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		FFA3EEF1177BB6E600B0D439 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		FFA3EEF3177BB6EF00B0D439 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,11 +92,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFA3EEF4177BB6EF00B0D439 /* SystemConfiguration.framework in Frameworks */,
+				FFA3EEF2177BB6E600B0D439 /* libz.dylib in Frameworks */,
+				FFA3EEF0177BB6D400B0D439 /* CoreTelephony.framework in Frameworks */,
 				10E79DB6165D4952004815E6 /* QuartzCore.framework in Frameworks */,
 				105E22841644637200601A9D /* UIKit.framework in Frameworks */,
 				105E22861644637200601A9D /* Foundation.framework in Frameworks */,
 				105E22881644637200601A9D /* CoreGraphics.framework in Frameworks */,
 				FFA3EEEC177B67BC00B0D439 /* WindowsAzureMobileServices.framework in Frameworks */,
+				FFA3EEEE177BB55B00B0D439 /* NewRelicAgent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +110,9 @@
 		105E22741644637200601A9D = {
 			isa = PBXGroup;
 			children = (
+				FFA3EEF3177BB6EF00B0D439 /* SystemConfiguration.framework */,
+				FFA3EEF1177BB6E600B0D439 /* libz.dylib */,
+				FFA3EEEF177BB6D400B0D439 /* CoreTelephony.framework */,
 				10E79DB5165D4952004815E6 /* QuartzCore.framework */,
 				105E22891644637200601A9D /* EventBuddy */,
 				105E22821644637200601A9D /* Frameworks */,
@@ -116,6 +131,7 @@
 		105E22821644637200601A9D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FFA3EEED177BB55B00B0D439 /* NewRelicAgent.framework */,
 				FFA3EEEB177B67BC00B0D439 /* WindowsAzureMobileServices.framework */,
 				105E22831644637200601A9D /* UIKit.framework */,
 				105E22851644637200601A9D /* Foundation.framework */,

@@ -8,15 +8,13 @@
 
 #import "AppDelegate.h"
 #import "EventBuddyService.h"
-
+#import <NewRelicAgent/NewRelicAgent.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    //EventBuddyService *ebService = [EventBuddyService getInstance];
-
+    [NewRelicAgent startWithApplicationToken:@"AA304ef133a7a670c6efd53015b73500115c96f808"];
     return YES;
 }
 							
