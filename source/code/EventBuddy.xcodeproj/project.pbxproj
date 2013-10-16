@@ -224,6 +224,11 @@
 			attributes = {
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = Microsoft;
+				TargetAttributes = {
+					105E227E1644637200601A9D = {
+						DevelopmentTeam = 8428FXRXQ3;
+					};
+				};
 			};
 			buildConfigurationList = 105E22791644637200601A9D /* Build configuration list for PBXProject "EventBuddy" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -358,6 +363,8 @@
 		105E22A41644637200601A9D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -366,6 +373,7 @@
 				GCC_PREFIX_HEADER = "EventBuddy/EventBuddy-Prefix.pch";
 				INFOPLIST_FILE = "EventBuddy/EventBuddy-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -373,6 +381,8 @@
 		105E22A51644637200601A9D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -381,6 +391,7 @@
 				GCC_PREFIX_HEADER = "EventBuddy/EventBuddy-Prefix.pch";
 				INFOPLIST_FILE = "EventBuddy/EventBuddy-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

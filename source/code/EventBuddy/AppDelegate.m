@@ -14,7 +14,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [NewRelicAgent startWithApplicationToken:@"AA304ef133a7a670c6efd53015b73500115c96f808"];
+    [NewRelicAgent startWithApplicationToken:@"AA7588c0f74235b45660de6de33ec24b92658ee09d"];
     return YES;
 }
 							
