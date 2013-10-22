@@ -155,23 +155,30 @@ BOOL didLogout;
     eventNameLabel.text = [event objectForKey:@"name"];
     
     UILabel *eventDescriptionLabel = (UILabel *)[cell viewWithTag:2];
-    eventDescriptionLabel.textColor = [UIColor redColor];
     eventDescriptionLabel.text = [event objectForKey:@"description"];
-
-    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"MM.dd.yyyy"];
     
-    UILabel *startLabel = (UILabel *)[cell viewWithTag:3];
-    startLabel.textColor = [UIColor blueColor];
-    NSDate *startDate = [event objectForKey:@"start"];
-    startLabel.text = [NSString stringWithFormat:@"Starts:%@ | ", [formatter stringFromDate:startDate]];
+    UIImageView *sessionImage = (UIImageView *)[cell viewWithTag:6];
+    
+    NSURL *url = [NSURL URLWithString:[event objectForKey:@"img"]];
+    if(url) {
+        NSData *data = [NSData dataWithContentsOfURL:url];
+        UIImage *image = [UIImage imageWithData:data];
+        [sessionImage setImage:image];
+    }
 
-    UILabel *endLabel = (UILabel *)[cell viewWithTag:4];
-    endLabel.textColor = [UIColor blueColor];
-    NSDate *endDate = [event objectForKey:@"end"];
-    endLabel.text = [NSString stringWithFormat:@"Ends:%@", [formatter stringFromDate:endDate]];
-    //    endLabel.text = [event objectForKey:@"end"];
+//    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+//    [formatter setDateFormat:@"MM.dd.yyyy"];
 //    
+//    UILabel *startLabel = (UILabel *)[cell viewWithTag:3];
+//    startLabel.textColor = [UIColor blueColor];
+//    NSDate *startDate = [event objectForKey:@"start"];
+//    startLabel.text = [NSString stringWithFormat:@"Starts:%@ | ", [formatter stringFromDate:startDate]];
+//
+//    UILabel *endLabel = (UILabel *)[cell viewWithTag:4];
+//    endLabel.textColor = [UIColor blueColor];
+//    NSDate *endDate = [event objectForKey:@"end"];
+//    endLabel.text = [NSString stringWithFormat:@"Ends:%@", [formatter stringFromDate:endDate]];
+
     return cell;
 }
 

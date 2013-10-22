@@ -115,27 +115,24 @@
     UILabel *sessionNameLabel = (UILabel *)[cell viewWithTag:1];
     sessionNameLabel.textColor = [UIColor blackColor];
     sessionNameLabel.text = [session objectForKey:@"name"];
-
-    UILabel *sessionRoomLabel = (UILabel *)[cell viewWithTag:2];
-    sessionRoomLabel.textColor = [UIColor blueColor];
-    sessionRoomLabel.text = [session objectForKey:@"room"];
     
     UILabel *sessionSpeakerLabel = (UILabel *)[cell viewWithTag:3];
-    sessionSpeakerLabel.textColor = [UIColor redColor];
     sessionSpeakerLabel.text = [session objectForKey:@"speaker"];
     
-    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"MM.dd.yyyy"];
+    NSDateFormatter* dateformatter = [[NSDateFormatter alloc] init];
+    NSDateFormatter* timeformatter = [[NSDateFormatter alloc] init];
+    [dateformatter setDateFormat: @"MMM.dd"];
+    [timeformatter setTimeStyle: NSDateFormatterShortStyle];
     
     UILabel *startLabel = (UILabel *)[cell viewWithTag:4];
-    startLabel.textColor = [UIColor blueColor];
     NSDate *startDate = [session objectForKey:@"start"];
-    startLabel.text = [NSString stringWithFormat:@"Starts:%@ | ", [formatter stringFromDate:startDate]];
-    
-    UILabel *endLabel = (UILabel *)[cell viewWithTag:5];
-    endLabel.textColor = [UIColor blueColor];
     NSDate *endDate = [session objectForKey:@"end"];
-    endLabel.text = [NSString stringWithFormat:@"Ends:%@", [formatter stringFromDate:endDate]];
+    startLabel.text = [NSString stringWithFormat:@"%@    %@-%@", [dateformatter stringFromDate:startDate], [timeformatter stringFromDate:startDate], [timeformatter stringFromDate:endDate]];
+    
+//    UILabel *endLabel = (UILabel *)[cell viewWithTag:5];
+//    endLabel.textColor = [UIColor blueColor];
+//    NSDate *endDate = [session objectForKey:@"end"];
+//    endLabel.text = [NSString stringWithFormat:@"Ends:%@", [formatter stringFromDate:endDate]];
     
     UIImageView *sessionImage = (UIImageView *)[cell viewWithTag:6];
     

@@ -27,7 +27,7 @@
 -(void)setBackground{
     //Resize background
     UIGraphicsBeginImageContext(self.view.frame.size);
-    [[UIImage imageNamed:@"wpbackground2.png"] drawInRect:self.view.bounds];
+    [[UIImage imageNamed:@"wpbackground-notop.png"] drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
