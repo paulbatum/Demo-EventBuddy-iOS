@@ -31,11 +31,8 @@ static EventBuddyService *singletonInstance;
 
 -(EventBuddyService *) init
 {
-//    MSClient *client = [MSClient clientWithApplicationURLString:@"https://eventbuddypb.azure-mobile.net/"
-//                                                 applicationKey:@"rqlLruyknRZFERcSBlRFpmGlGXuNAQ21"];
-    
-    MSClient *client = [MSClient clientWithApplicationURLString:@"https://eventbuddypb.preview.azure-mobile-preview.net/"
-                                                 applicationKey:@"WdrdvlOAYZAAoLFuHJZPiqZjxhOMHL65"];
+    MSClient *client = [MSClient clientWithApplicationURLString:@"https://eventbuddypb.azure-mobile.net/"
+                                                 applicationKey:@"xoIETyloIPQUREennYtQuYvTPRkglR17"];
     
     // Add a Mobile Service filter to enable the busy indicator
     self.client = [client  clientWithFilter:self];
