@@ -189,7 +189,10 @@
 
 
 - (IBAction)tappedViewDocument:(id)sender {
-    NSURL *url = [ [ NSURL alloc ] initWithString: [self.session objectForKey:@"deckSource"]];
-    [[UIApplication sharedApplication] openURL:url];
+    NSString *deck = [self.session objectForKey:@"deckSource"];
+    if(deck) {
+        NSURL *url = [ [ NSURL alloc ] initWithString: deck];
+        [[UIApplication sharedApplication] openURL:url];
+    }
 }
 @end

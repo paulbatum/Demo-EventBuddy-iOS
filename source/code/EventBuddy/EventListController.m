@@ -159,8 +159,9 @@ BOOL didLogout;
     
     UIImageView *sessionImage = (UIImageView *)[cell viewWithTag:6];
     
-    NSURL *url = [NSURL URLWithString:[event objectForKey:@"img"]];
-    if(url) {
+    NSString *img = [event objectForKey:@"img"];
+    if(img != [NSNull null]) {
+        NSURL *url = [NSURL URLWithString:img];
         NSData *data = [NSData dataWithContentsOfURL:url];
         UIImage *image = [UIImage imageWithData:data];
         [sessionImage setImage:image];
